@@ -16,13 +16,23 @@ public class Vuelos  {
 	}
 
 	public Vuelos(String hora, Aviones avion, Pilotos piloto, String destino) {
-		super();
 		this.hora = hora;
 		this.avion = avion;
 		this.piloto = piloto;
 		this.destino = destino;
 	}
-
+	
+	public boolean registrarPasajero(Pasajeros pasajero) {
+		if(cantidad_pasajeros.size() < avion.getMaxPasajeros()) {
+			cantidad_pasajeros.add(pasajero);
+			System.out.println("Se a registrado un pasajero");
+			return true;
+		}else if(cantidad_pasajeros.size() > avion.getMaxPasajeros()){
+			System.out.println("Se a llegado a la cantidad maxima de pasajeros");
+		}
+		return false;
+	}
+	
 	public String getHora() {
 		return hora;
 	}
