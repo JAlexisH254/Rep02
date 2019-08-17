@@ -1,6 +1,6 @@
 
 public class Pilotos extends Personas{
-	String codPiloto;
+	private String codPiloto;
 
 	public Pilotos() {
 		super("Pepito", 1000);

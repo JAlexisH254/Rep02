@@ -13,6 +13,7 @@ public class Vuelos  {
 		hora = "00:00:00";
 		avion = new Aviones();
 		piloto = new Pilotos();
+		destino = "lima";
 	}
 
 	public Vuelos(String hora, Aviones avion, Pilotos piloto, String destino) {
@@ -33,6 +34,12 @@ public class Vuelos  {
 		return false;
 	}
 	
+	public void mostrarPasajeros() {
+		for(int i = 0 ;i < cantidad_pasajeros.size();i++) {
+			System.out.print(cantidad_pasajeros.get(i).toString());;
+		}
+	}
+	
 	public String getHora() {
 		return hora;
 	}
@@ -48,10 +55,28 @@ public class Vuelos  {
 	public void setAvion(Aviones avion) {
 		this.avion = avion;
 	}
+	
+	
+	
+	public Pilotos getPiloto() {
+		return piloto;
+	}
+
+	public void setPiloto(Pilotos piloto) {
+		this.piloto = piloto;
+	}
+
+	public String getDestino() {
+		return destino;
+	}
+
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
 
 	@Override
 	public String toString() {
-		return "\nHora: " + hora + "\nAVION: " + avion + "\nPiloto: " + piloto + "\nDestino: " + destino + "\nCantidad de pasajeros: " + cantidad_pasajeros.size();
+		return "\nHora: " + hora + "\nAVION: " + avion + "\nPiloto: " + piloto + "\nDestino: " + destino + "\nCantidad de pasajeros: " + cantidad_pasajeros.size() + "\n";
 	}
 	
 	
